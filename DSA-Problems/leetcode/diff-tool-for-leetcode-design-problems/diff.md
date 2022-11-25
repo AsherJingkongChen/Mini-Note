@@ -1,4 +1,4 @@
-```json
+```js
 [
   { index: 167, name: 'get', args: [ 846 ], output: 452, expect: -1 },
   { index: 288, name: 'get', args: [ 242 ], output: 489, expect: -1 },
