@@ -3,6 +3,7 @@
 
 #### Prerequisites
 - Node.js CLI
+> No dependencies required here
 
 #### Before running command and print
 - Copy input's method name and arguments and paste them on the corresponding rows in `in.json`
