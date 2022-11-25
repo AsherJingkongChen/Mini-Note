@@ -12,8 +12,10 @@
 - Copy expected output array and paste it on `ex.json`
 
 #### Run command
+2 options
 ```
-node index.js
+node index.js #1
+node index.js > diff.md #2
 ```
 
 #### File Tree
