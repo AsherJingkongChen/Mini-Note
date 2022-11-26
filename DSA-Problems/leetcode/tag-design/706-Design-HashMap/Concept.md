@@ -63,3 +63,6 @@ stateDiagram
     COLL --> [*] : No collision
     BUCK --> [*]
 ```
+
+----
+[Return README](./README.md)

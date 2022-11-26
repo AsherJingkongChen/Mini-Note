@@ -11,3 +11,6 @@
 - Load factor
 - Hashing function
 - Collision resolution
+
+----
+[Return README](./README.md)
