@@ -12,17 +12,38 @@
 | |–>|
 |4|–>|(52,v)|(54,v)|(55,v)|
 
-Buffer Size = `M`
-Max bucket size = `B`
-Number of keys < `N` = `B * M`
+- Number of buckets is `M`
+- Number of entries is `n`
 
-### Pseudocode
-**Hash Function**
-```cpp
-Float goldRatio = 0.6180339;
+### Functionality design
+```mermaid
+classDiagram
+	class HashMap~Key, Value, Hash~ {
+		- Bucket[] buckets
+		- Hash hasher
+		- numOfEntries
+		
+		+ put(Key, Value)
+		+ Value get(Key)
+		+ remove(Key)
+		+ resize(Size)
 
-SizeType hash(SizeType bufferSize, Number key) {
-	return bufferSize * 
-	
-}
+		+ size()
+		+ bucketCount()
+		+ loadFactor()
+		+ rehash()
+		- hash(Key)
+	}
+
+	class Hash~Key~ {
+		- const GoldRatio
+		+ float invoke_operator(Key)
+	}
+
+	Bucket --|> std_vector~Pair(Key, Value)~ : Is
+	HashMap o-- Bucket : Has
+	HashMap o-- Hash : Has
 ```
+
+### Flow chart
+> TODO

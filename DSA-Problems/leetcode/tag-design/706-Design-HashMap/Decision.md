@@ -1,11 +1,13 @@
-### Buffer size
-- power of 2 is easy and efficient for a dynamic array
+# Decision
+
+### Array of buckets size
+- power of `2` is easy and efficient for a dynamic array
 
 ### Hash function scheme
 **Hashing by multiplication** - [Fibonacci Hashing](https://iq.opengenus.org/fibonacci-hashing/)
 *(Compared to Hashing by division)*
 - Pros
-	- Any size of buffer is allowed
+	- Any size of the array of buckets is allowed
 	- Uniformly distributed
 	- Make a good use of memory
 - Cons
