@@ -1,4 +1,4 @@
-# Concepts
+# Concept
 
 ### General Hash Map
 > How should it looks like?

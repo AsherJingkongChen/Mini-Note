@@ -1,4 +1,4 @@
-# Abstracts
+# Abstract
 
 ### Purposes of Hash Map
 **LURD**
