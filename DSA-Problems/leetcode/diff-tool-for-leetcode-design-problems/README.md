@@ -1,20 +1,24 @@
 # A diff tool
 > It prints out difference between outputs and expected outputs in LeetCode's Design Problems
 
-#### Prerequisites
+### Prerequisites
 - Node.js CLI
 
-#### Before running command and print
+*(No dependencies required here)*
+
+### Before running command and print
 - Copy input's method name and arguments and paste them on the corresponding rows in `in.json`
 - Copy output array and paste it on `out.json`
 - Copy expected output array and paste it on `ex.json`
 
-#### Run command
-```
-node index.js
+### Run command
+2 options
+```bash
+node index.js #1
+node index.js > diff.md #2
 ```
 
-#### File Tree
+### File Tree
 ```
 ./
 |-- README.md
