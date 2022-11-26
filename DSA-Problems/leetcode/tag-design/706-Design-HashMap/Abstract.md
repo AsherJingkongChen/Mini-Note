@@ -13,4 +13,6 @@
 - Collision resolution
 
 ----
-[Return README](./README.md)
+[Go to previous - README](./README.md)
+[Go to next - Concept](./Concept.md)
+[Return home - README](./README.md)

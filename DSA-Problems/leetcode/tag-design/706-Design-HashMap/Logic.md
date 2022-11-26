@@ -62,4 +62,6 @@ classDiagram
 
 
 ----
-[Return README](./README.md)
+[Go to previous - Decision](./Decision.md)
+[Go to next - Code](./Code.md)
+[Return home - README](./README.md)

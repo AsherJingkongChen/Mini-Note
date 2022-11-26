@@ -28,4 +28,6 @@
 	- Higher complexity, depends on the bucket size
 
 ----
-[Return README](./README.md)
+[Go to previous - Concept]()
+[Go to next - Logic]()
+[Return home - README](./README.md)
