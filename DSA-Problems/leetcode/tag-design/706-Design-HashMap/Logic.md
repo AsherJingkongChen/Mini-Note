@@ -1,23 +1,28 @@
 # Logic
 
 ### Outline Of Structure
-|11|23|37|
+|Key|->|Entry|
 |-|-|-|-|-|-|-|-|
-|53|13|
-|67|59|17|61|
-|73|71|
-|89|83|79|19|31|41|43|45|
-|93|22|47|
-|42|65|30|92|
-|98|34|
+|2|–>|(2,v)|
+|7|–>|(7,v)|
+|3|–>|(3,v)|(11,v)|
+| |–>|
+|9|–>|(1,v)|(10,v)|(12,v)|(15,v)|(31,v)|(24,v)|
+|5|–>|(21,v)|
+| |–>|
+|4|–>|(52,v)|(54,v)|(55,v)|
 
-Buffer Width = `W`
-Number of keys = `W^2` = `N`
+Buffer Size = `M`
+Max bucket size = `B`
+Number of keys < `N` = `B * M`
 
 ### Pseudocode
 **Hash Function**
 ```cpp
-Hash() {
+Float goldRatio = 0.6180339;
+
+SizeType hash(SizeType bufferSize, Number key) {
+	return bufferSize * 
 	
 }
 ```

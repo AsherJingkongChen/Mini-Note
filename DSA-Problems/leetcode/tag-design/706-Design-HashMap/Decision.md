@@ -1,1 +1,23 @@
-[Hashing by multiplication - Fibonacci Hashing](https://iq.opengenus.org/fibonacci-hashing/)
+### Buffer size
+- power of 2 is easy and efficient for a dynamic array
+
+### Hash function scheme
+**Hashing by multiplication** - [Fibonacci Hashing](https://iq.opengenus.org/fibonacci-hashing/)
+*(Compared to Hashing by division)*
+- Pros
+	- Any size of buffer is allowed
+	- Uniformly distributed
+	- Make a good use of memory
+- Cons
+	- Slightly slower than division
+	- More collisions
+
+### Collision resolution scheme
+**Open hashing**
+*(Compared to Closed hashing)*
+- Pros
+	- Less efforts on handling probing
+- Cons
+	- More cache misses due to referencing buckets
+	- Higher complexity, depends on the bucket size
+
