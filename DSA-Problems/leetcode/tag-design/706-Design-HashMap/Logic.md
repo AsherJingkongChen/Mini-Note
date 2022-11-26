@@ -12,37 +12,49 @@
 | |–>|
 |4|–>|(52,v)|(54,v)|(55,v)|
 
+### Refactor
 - Number of buckets is `M`
+	- `bucketCount()`
 - Number of entries is `n`
+	- `numOfEntries, size()`
+- Load factor `A = n / M ≤ 1` 
+	- `loadFactor() = size() / bucketCount() <= maxLoadFactor()`
+	- when `loadFactor()` passes `maxLoadFactor()`, do rehashing
 
 ### Functionality design
 ```mermaid
 classDiagram
-	class HashMap~Key, Value, Hash~ {
-		- Bucket[] buckets
+	class HashMap~Key, Value~ {
+		- SizeType numOfEntries
+		- std_vector~Bucket~ buckets
 		- Hash hasher
-		- numOfEntries
 		
 		+ put(Key, Value)
-		+ Value get(Key)
+		+ ValueType get(Key)
 		+ remove(Key)
-		+ resize(Size)
-
-		+ size()
-		+ bucketCount()
-		+ loadFactor()
-		+ rehash()
-		- hash(Key)
+		+ rehash(SizeType)
+		- autoRehash()
+		
+		+ SizeType size()
+		+ SizeType bucketCount()
+		+ double loadFactor()
+		+ double maxLoadFactor()
+		
+		- SizeType hashedKey(Key)
 	}
 
-	class Hash~Key~ {
-		- const GoldRatio
-		+ float invoke_operator(Key)
+	class MultiHash~Key~ {
+		- GoldRatio$
+		+ double invoke_operator(Key)
 	}
 
-	Bucket --|> std_vector~Pair(Key, Value)~ : Is
-	HashMap o-- Bucket : Has
-	HashMap o-- Hash : Has
+	Bucket --|> std_vector~Pair(Key, Value)~ : as
+	Hash --|> MultiHash : as
+	SizeType --|> std_size_t : as
+	MyHashMap --|> HashMap : is
+	HashMap o-- Bucket : use
+	HashMap o-- Hash : use
+	HashMap o-- SizeType : use
 ```
 
 ### Flow chart
