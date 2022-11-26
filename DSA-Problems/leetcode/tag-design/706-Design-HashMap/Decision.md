@@ -4,8 +4,8 @@
 - power of `2` is easy and efficient for a dynamic array
 
 ### Hash function scheme
-**Hashing by multiplication** - [Fibonacci Hashing](https://iq.opengenus.org/fibonacci-hashing/)
-*(Compared to Hashing by division)*
+**Hashing by multiplication**
+> Compared to Hashing by division
 - Pros
 	- Any size of the array of buckets is allowed
 	- Uniformly distributed
@@ -13,10 +13,12 @@
 - Cons
 	- Slightly slower than division
 	- More collisions
+- Reference
+	-  [Fibonacci Hashing](https://iq.opengenus.org/fibonacci-hashing/)
 
 ### Collision resolution scheme
 **Open hashing**
-*(Compared to Closed hashing)*
+> Compared to Closed hashing
 - Pros
 	- Less efforts on handling probing
 - Cons

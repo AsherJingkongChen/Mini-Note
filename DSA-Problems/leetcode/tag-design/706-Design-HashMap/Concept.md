@@ -42,7 +42,7 @@ stateDiagram
     PROB: Find next address
     [*] --> HASH
     HASH --> COLL
-    COLL --> PROB: Collision occur
+    COLL --> PROB: Collision occurs
     COLL --> [*] : No collision
     PROB --> COLL
 ```
