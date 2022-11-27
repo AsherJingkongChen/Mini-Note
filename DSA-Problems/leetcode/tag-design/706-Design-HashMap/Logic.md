@@ -16,39 +16,50 @@
 - Number of buckets is `M`
 	- `bucketCount()`
 - Number of entries is `n`
-	- `numOfEntries, size()`
-- Load factor `A = n / M ≤ 1` 
-	- `loadFactor() = size() / bucketCount() <= maxLoadFactor()`
-	- when `loadFactor()` passes `maxLoadFactor()`, do rehashing
+	- `entryCount()`
+- Load factor `A = n / M` 
+	- `loadFactor() = entryCount() / bucketCount()`
+	- when `loadFactor() > maxLoadFactor()`, call rehash to double size up
+	- when `loadFactor() < minLoadFactor()`, call rehash to halve size down
 
 ### Functionality design
 ```mermaid
 classDiagram
-	class HashMap~Key, Value~ {
-		- SizeType numOfEntries
-		- std_vector~Bucket~ buckets
+	class HashMap~Key, Value, Value None~ {
+		- SizeType __entryCount
+		- std::vector~Bucket~ buckets
 		- Hash hasher
 		
 		+ put(Key, Value)
 		+ ValueType get(Key)
 		+ remove(Key)
-		+ rehash(SizeType)
-		- autoRehash()
 		
-		+ SizeType size()
+		+ SizeType entryCount()
 		+ SizeType bucketCount()
 		+ double loadFactor()
 		+ double maxLoadFactor()
-		
-		- SizeType hashedKey(Key)
+		+ double minLoadFactor()
+		+ SizeType defaultBucketCount()
+
+		- Bucket::iterator findEntry(Bucket, Key)
+		- SizeType address(Key)
+		- rehash(SizeType)
+		- tryRehashUp()
+		- tryRehashDown()
 	}
 
 	class MultiHash~Key~ {
 		- GoldRatio$
 		+ double invoke_operator(Key)
 	}
+	
+	class Entry {
+		+ key
+		+ value
+	}
 
-	Bucket --|> std_vector~Pair(Key, Value)~ : as
+	Bucket --|> std_vector~Entry~ : as
+	std_vector~Entry~ o-- Entry : use
 	Hash --|> MultiHash : as
 	SizeType --|> std_size_t : as
 	MyHashMap --|> HashMap : is
@@ -58,8 +69,47 @@ classDiagram
 ```
 
 ### Flow chart
-> TODO
+###### put(Key, Value)
+```mermaid
+graph TD
+	FIND("findEntry(Bucket, Key)")
+	ADDR("address(Key)")
+	
+	subgraph "put(Key, Value)"
+		ADDR -->|Bucket| FIND
+		FIND -->|Entry| COND{"Found or not"}
+		COND -->|True| T_val("Entry.value = value")
+		COND -->|False| T_new("Bucket.emplace_back(key, value)")
+	end
+```
 
+###### get(Key)
+```mermaid
+graph TD
+	FIND("findEntry(Bucket, Key)")
+	ADDR("address(Key)")
+	
+	subgraph "get(Key)"
+		ADDR -->|Bucket| FIND
+		FIND -->|Entry| COND{"Found or not"}
+		COND -->|True| T_val("return Entry.value")
+		COND -->|False| T_new("return None")
+	end
+```
+
+###### remove(Key)
+```mermaid
+graph TD
+	FIND("findEntry(Bucket, Key)")
+	ADDR("address(Key)")
+	
+	subgraph "remove(Key)"
+		ADDR -->|Bucket| FIND
+		FIND -->|Entry| COND{"Found or not"}
+		COND -->|True| T_val("Bucket.erase(Entry)")
+		COND -->|False| T_new(" ")
+	end
+```
 
 ----
 - [Go to previous - Decision](./Decision.md)

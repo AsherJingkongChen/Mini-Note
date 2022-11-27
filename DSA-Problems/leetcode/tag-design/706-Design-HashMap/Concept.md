@@ -5,7 +5,7 @@
 
 - Number of buckets is `M`
 - Number of entries is `n`
-- Load factor `A = n / M ≤ 1`
+- Load factor `A = n / M`
 
 ### Hash function
 > Generate addresses for keys
@@ -15,7 +15,7 @@
 - Hashed values are uniformly distributed
 	- Use every imformation in any key
 	- Less memory waste
-- Less collision
+	- Less collision
 
 ###### Schemes
 - Hashing by division
@@ -30,10 +30,10 @@
 
 ###### Schemes
 - Closed Hashing / Open Addressing
-	- Closed - All entries are stored in one array of buckets
-	- Open - Address partically depends on the other buckets
+	- Closed - All entries are stored in one array of buckets, the max size of bucket is `1`
+	- Open - Addressing partically depends on the other buckets
 	- `h(k, i) = p(h(k, i-1))`, `i` is times of probing, `p` is probing function
-	- Cost skyrockets when the Load factor `A` approaches `1`
+	- Cost skyrockets when the load factor `A` approaches `1`
 	- Probing state diagram:
 ```mermaid
 stateDiagram
@@ -48,8 +48,8 @@ stateDiagram
 ```
 - Open Hashing / Closed Addressing / Seperate Chaining
 	- Open - Not all entries are stored in one array of buckets
-	- Closed - Address totally depends on the key
-	- Less sensitive to the Load factor `A`
+	- Closed - Addressing totally depends on the key
+	- Less sensitive to the load factor `A`
 	- Use buckets to store collided keys
 	- State diagram:
 ```mermaid
