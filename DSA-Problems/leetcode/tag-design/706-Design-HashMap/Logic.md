@@ -113,6 +113,6 @@ graph TD
 ```
 
 ----
-- [Go to previous - Decision](./Decision.md)
-- [Go to next - Code](./Code.md)
-- [Return home - README](./README.md)
+- [Previous - Decision](./Decision.md)
+- [Next - Code](./Code.md)
+- [Return - README](./README.md)

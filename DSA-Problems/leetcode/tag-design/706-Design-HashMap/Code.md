@@ -152,6 +152,6 @@ class MyHashMap: public HashMap<int, int, -1> {
 ```
 
 ----
-- [Go to previous - Logic](./Logic.md)
-- [Go to next - README](./README.md)
-- [Return home - README](./README.md)
+- [Previous - Logic](./Logic.md)
+- [Next - README](./README.md)
+- [Return - README](./README.md)

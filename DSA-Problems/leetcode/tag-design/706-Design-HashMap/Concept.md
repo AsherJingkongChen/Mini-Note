@@ -66,6 +66,6 @@ stateDiagram
 ```
 
 ----
-- [Go to previous - Abstract](./Abstract.md)
-- [Go to next - Decision](./Decision.md)
-- [Return home - README](./README.md)
+- [Previous - Abstract](./Abstract.md)
+- [Next - Decision](./Decision.md)
+- [Return - README](./README.md)

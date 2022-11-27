@@ -27,6 +27,6 @@
 	- More cache misses occur during referencing buckets
 
 ----
-- [Go to previous - Concept](./Concept.md)
-- [Go to next - Logic](./Logic.md)
-- [Return home - README](./README.md)
+- [Previous - Concept](./Concept.md)
+- [Next - Logic](./Logic.md)
+- [Return - README](./README.md)
