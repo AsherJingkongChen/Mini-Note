@@ -30,15 +30,15 @@ private: // data
   Hash hasher;
 
 public: // properties
-	inline SizeType entryCount() const { 
-    return __entryCount; 
+  inline SizeType entryCount() const { 
+	return __entryCount; 
   }
 
-	inline SizeType bucketCount() const { 
+  inline SizeType bucketCount() const { 
     return buckets.size(); 
   }
 
-	inline double loadFactor() const { 
+  inline double loadFactor() const { 
     return static_cast<double>(entryCount()) / bucketCount(); 
   }
 
@@ -103,7 +103,7 @@ private: // utilities
                         });
   }
 
-	SizeType address(const Key& key) const {
+  SizeType address(const Key& key) const {
     return bucketCount() * hasher(key);
   }
 
