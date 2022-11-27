@@ -9,5 +9,6 @@
 ### Reference
 - [Wikipedia - Hash table (EN)](https://en.wikipedia.org/wiki/Hash_table)
 - [Stack Overflow - Open and closed hashing (EN)](https://stackoverflow.com/questions/9124331/meaning-of-open-hashing-and-closed-hashing)
+- [Open Genius - Fibonacci Hashing](https://iq.opengenus.org/fibonacci-hashing/)
 - [Blog - Hash table introduction (zh-TW)](http://alrightchiu.github.io/SecondRound/hash-tableintrojian-jie.html)
 - [Blog - Hash table seperate chaining (zh-TW)](http://alrightchiu.github.io/SecondRound/hash-tablechaining.html)
