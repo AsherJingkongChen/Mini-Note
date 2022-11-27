@@ -1,15 +1,16 @@
 # Code
 
 ### C++
+
 ```cpp
 template<class Key>
 struct MultiHash {
   double operator()(const Key& key) const noexcept {
-    return (goldRatio * key) - std::size_t(goldRatio * key);
+    return (goldRatio() * key) - std::size_t(goldRatio() * key);
   }
 
 private:
-  static constexpr double goldRatio = 0.618033988749894;
+  static constexpr double goldRatio() { return 0.618033988749894; }
 };
 
 template<class Key, class Value, Value None>
@@ -41,9 +42,9 @@ public: // properties
     return static_cast<double>(entryCount()) / bucketCount(); 
   }
 
-  inline double maxLoadFactor() const { return 1.0; }
-  inline double minLoadFactor() const { return 0.2; }
-  inline SizeType defaultBucketCount() const { return 64; }
+  static constexpr double maxLoadFactor() { return 1.0; }
+  static constexpr double minLoadFactor() { return 0.2; }
+  static constexpr SizeType defaultBucketCount() { return 64; }
 
 public: // modifier
   void put(const Key& key, const Value& value) {

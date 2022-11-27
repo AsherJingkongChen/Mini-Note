@@ -5,7 +5,7 @@
 
 ### Hash function scheme
 
-###### Hashing by multiplication
+##### "Hashing by multiplication"
 > Compared to Hashing by division
 - Pros
 	- Any size of the array of buckets is allowed, e.g. power of 2
@@ -18,7 +18,7 @@
 
 ### Collision resolution scheme
 
-###### Open hashing
+##### "Open hashing"
 > Compared to Closed hashing
 - Pros
 	- Less efforts on handling probing

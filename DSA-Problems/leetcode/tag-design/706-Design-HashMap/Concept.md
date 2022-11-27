@@ -17,7 +17,7 @@
 	- Less memory waste
 	- Less collision
 
-###### Schemes
+##### Schemes
 - Hashing by division
 	- `h(key) = key % M`
 	- If `M` approaches power of two, more collisions will occur.
@@ -28,7 +28,7 @@
 ### Collision resolution
 > Handle collision, since they are unavoidable
 
-###### Schemes
+##### Schemes
 - Closed Hashing / Open Addressing
 	- Closed - All entries are stored in one array of buckets, the max size of bucket is `1`
 	- Open - Addressing partically depends on the other buckets
@@ -46,6 +46,7 @@ stateDiagram
     COLL --> [*] : No collision
     PROB --> COLL
 ```
+
 - Open Hashing / Closed Addressing / Seperate Chaining
 	- Open - Not all entries are stored in one array of buckets
 	- Closed - Addressing totally depends on the key

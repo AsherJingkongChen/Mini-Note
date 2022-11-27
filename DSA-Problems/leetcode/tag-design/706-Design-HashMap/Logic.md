@@ -69,7 +69,8 @@ classDiagram
 ```
 
 ### Flow chart
-###### put(Key, Value)
+
+##### put(Key, Value)
 ```mermaid
 graph TD
 	FIND("findEntry(Bucket, Key)")
@@ -83,7 +84,7 @@ graph TD
 	end
 ```
 
-###### get(Key)
+##### get(Key)
 ```mermaid
 graph TD
 	FIND("findEntry(Bucket, Key)")
@@ -97,7 +98,7 @@ graph TD
 	end
 ```
 
-###### remove(Key)
+##### remove(Key)
 ```mermaid
 graph TD
 	FIND("findEntry(Bucket, Key)")
