@@ -24,7 +24,7 @@ int main() {
 
 ### Result (Class information)
 
-```cpp
+```c++
 Vtable for EntireVirtualBase
 EntireVirtualBase::vtable for EntireVirtualBase: 5 entries
 0     (int (*)(...))0
@@ -81,6 +81,6 @@ EntireVirtualBase (0x0x1105af5a0) 0 nearly-empty
 3. Pure virtual function has no name in the base class, and derived class must define it
 
 ----
-[Previous - Debug](./Debug.md)
-[Next - README](./README.md)
-[Return - README](./README.md)
+- [Previous - Debug](./Debug.md)
+- [Next - README](./README.md)
+- [Return - README](./README.md)

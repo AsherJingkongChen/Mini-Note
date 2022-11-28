@@ -17,6 +17,6 @@ cat _-test.cpp.001l.class | c++filt -n
 ```
 
 ----
-[Previous - README](./README.md)
-[Next - Discovery](./Discovery.md)
-[Return - README](./README.md)
+- [Previous - README](./README.md)
+- [Next - Discovery](./Discovery.md)
+- [Return - README](./README.md)
