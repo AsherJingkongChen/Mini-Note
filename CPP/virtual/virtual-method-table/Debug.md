@@ -10,7 +10,7 @@
 3. Use gcc's tool `c++filt`, to demangle the names in the `*.001l.class` file. Usage: `cat _-test.cpp.001l.class | c++filt -n`
 4. The information will be printed out to the console via stdout
 
-##### Workflow
+### Workflow
 ```bash
 g++ -std=c++11 -fdump-lang-class test.cpp -o _
 cat _-test.cpp.001l.class | c++filt -n

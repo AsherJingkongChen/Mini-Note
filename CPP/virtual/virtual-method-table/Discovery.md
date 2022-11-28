@@ -1,8 +1,7 @@
 # Discovery (or example)
+> What's the result should be like?
 
-### What's the result should be like?
-
-##### Code to be compiled
+### Code to be compiled
 
 ```cpp
 struct EntireVirtualBase { 
@@ -23,7 +22,7 @@ int main() {
 }
 ```
 
-##### Result (Class information)
+### Result (Class information)
 
 ```cpp
 Vtable for EntireVirtualBase
