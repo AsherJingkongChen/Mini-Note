@@ -6,7 +6,7 @@
 template<class Key>
 struct MultiHash {
   double operator()(const Key& key) const noexcept {
-    return (goldRatio() * key) - std::size_t(goldRatio() * key);
+    return (goldRatio() * key) - std::floor(goldRatio() * key);
   }
 
 private:
